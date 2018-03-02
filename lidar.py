@@ -19,9 +19,9 @@ import numpy as np
 cam = cv.VideoCapture(0)
 # our depth sensing camera output format has 120*720 pixels. Each pixel has 4 byes, 2 for depth, 2 for amplitude.
 # Since python OpenCV only support BRG3 format, our lidar will report 160*720 BGR3 format with 3 bytes/pixel. 
-cam.set(cv.cv.CV_CAP_PROP_FOURCC, cv.cv.CV_FOURCC('B', 'G', 'R', '3'))		#This line is only used on Linux platform
-cam.set(cv.cv.CV_CAP_PROP_FRAME_WIDTH, 160)     # set the width 160
-cam.set(cv.cv.CV_CAP_PROP_FRAME_HEIGHT, 720)    # set the height 720
+# cam.set(cv.cv.CV_CAP_PROP_FOURCC, cv.cv.CV_FOURCC('B', 'G', 'R', '3'))		#This line is needed for OpenCV2.0
+cam.set(3, 160)    # set the width cv.cv.CV_CAP_PROP_FRAME_WIDTH 160
+cam.set(4, 720)    # set the height cv.cv.CV_CAP_PROP_FRAME_HEIGHT 720
 
 # grab camera frames and display
 print "Hit Esc key to quit"
