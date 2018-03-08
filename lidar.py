@@ -23,7 +23,7 @@ for i in range (0, 3) :
     if cam :
         width = cam.get(3)
         height = cam.get(4)
-        if (width == 120 or width == 160 or width = 240) and height == 720 :
+        if (width == 120 or width == 160 or width == 240) and height == 720 :
             # cam.set(cv.cv.CV_CAP_PROP_FOURCC, cv.cv.CV_FOURCC('B', 'G', 'R', '3'))		#This line is needed for OpenCV2.*
             cam.set(3, 160)    # set the width cv.cv.CV_CAP_PROP_FRAME_WIDTH 160
             cam.set(4, 720)    # set the height cv.cv.CV_CAP_PROP_FRAME_HEIGHT 720
